@@ -9,6 +9,7 @@ RUN adblock2privoxy -p /etc/privoxy/ "https://easylist.to/easylist/easylist.txt"
 
 ADD ./privoxy-config /etc/privoxy/config
 ADD ./run.sh /opt/
+RUN chmod a+x /opt/run.sh
 
 LABEL org.freenas.interactive="false" \
       org.freenas.version="0.1" \
